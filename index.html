@@ -528,7 +528,7 @@ background-color: #bed7dc;
         }
 
         .steps-section h2 {
-            margin-bottom: 20px;
+            margin-bottom: 100px;
             font-size: 32px;
         }
 
@@ -563,14 +563,34 @@ background-color: #bed7dc;
             justify-content: center;
             gap: 50px;
         }
+
+        .icon {
+            padding: 0 15px;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-color: #bed7dc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px auto;
+            border: 5px solid #fff;
+
+        }
         
         .step-text {
             width: 200px;
+            padding: 20px;
+            border: 2px solid #abc2c6;
         }
 
-        .step-text .p-bold {
+        .step-text i {
+            font-size: 30px;
+        }
+
+        .card-text .p-bold {
             font-weight: bold;
-            font-size: 24px;
+            font-size: 18px;
         }
 
         .step::after {
@@ -658,6 +678,62 @@ background-color: #bed7dc;
         footer .all-rights {
             font-size: 12px;
         }
+
+
+
+        /* start here */
+        .card {
+      width: 250px;
+      height: 200px;
+      background-color: #bed7dc;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      margin: 0 20px;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-color: white;
+      padding: 30px 0;
+    }
+
+    .card-text {
+        position: absolute;
+        left: 10px;
+        bottom: -20px;
+    }
+
+    .icon-container {
+      background: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .icon i {
+        font-size: 30px;
+    }
+
+    .card-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 
     </style>
 </head>
@@ -885,24 +961,56 @@ background-color: #bed7dc;
 
     <section class="steps-section">
         <h2>EASY STEPS</h2>
-        <div>
+        <!-- <div>
             <div class="step">1</div>
             <div class="step">2</div>
             <div class="step--last">3</div>
-        </div>
-        <div class="step-texts">
+        </div> -->
+        <!-- <div class="step-texts">
             <div class="step-text">
-                <p class="p-bold">Step 1 description</p>
+                <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+               
+            </div>
+            <div class="step-text">
+                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                <p class="p-bold">Register</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
             <div class="step-text">
-                <p class="p-bold">Step 2 description</p>
+                <div class="icon"><i class="fa-solid fa-pen"></i></div>
+                <p class="p-bold">Receive your product</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div class="step-text">
-                <p class="p-bold">Step 3 description</p>
+        </div> -->
+        <div class="card-flex">
+        <div class="card">
+            <div class="icon-container">
+                <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <div class="card-text">
+                <p class="p-bold">Search for products</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
+          </div>
+          <div class="card">
+            <div class="icon-container">
+                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            </div>
+            <div class="card-text">
+                <p class="p-bold">Register</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon-container">
+                <div class="icon"><i class="fa-solid fa-pen"></i></div>
+            </div>
+            <div class="card-text">
+                <p class="p-bold">Receive your product</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
         </div>
     </section>
 
@@ -915,6 +1023,9 @@ background-color: #bed7dc;
         <button>Sign Up</button>
        </div>
     </section>
+
+
+
 
     <footer>
         <p>&copy; Vertex Digital Marketing 2024</p>
