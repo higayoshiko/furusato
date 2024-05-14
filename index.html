@@ -4,6 +4,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a898e0e4e9.js" crossorigin="anonymous"></script>
 
 <title>My Website</title>
     <style>
@@ -26,11 +27,12 @@
 
         /* search bar */
         .title-ctn {
-  display: flex;
-  flex-direction: row; /* Changed from column to row */
-  justify-content:space-around;
-  align-items: center;
-  height: 100px;
+        display: flex;
+        flex-direction: row; /* Changed from column to row */
+        justify-content:space-around;
+        align-items: center;
+        height: 100px;
+        margin: 20px 0;
 }
 
 .title {
@@ -41,7 +43,7 @@
   display: flex;
   align-items: center;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
@@ -50,8 +52,11 @@
   padding: 8px 16px;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 18px;
   flex: 1;
+  height: 30px;
+  width: 100px;
+  border-radius: 50px;
 }
 
 .search-container button {
@@ -62,11 +67,14 @@
   padding: 8px 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 16px;
+  font-size: 18px;
+  height: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .search-container button:hover {
-  background-color: #45a049;
+  background-color: #6a797b;
 }
 
 .search-container button i {
@@ -75,25 +83,37 @@
 
 .btn-dark {
     background-color: #bed7dc;
-    font-size: 14px;
-    border-radius: 3px;
+    font-size: 18px;
+    border-radius: 50px;
     padding: 10px;
     border: none;
     cursor: pointer;
-    font-weight: bold;
+    /* font-weight: bold; */
+    height: 50px;
+  width: 150px;
+  font-weight: bold;
+}
+
+.btn-dark:hover {
+background-color: #e5eff1;
 }
 
 .btn-light {
     background-color: #e5eff1;
-    font-size: 14px;
-    border-radius: 3px;
+    font-size: 18px;
+    border-radius: 50px;
     padding: 10px;
     border: none;
     cursor: pointer;
-    font-weight: bold;
+    /* font-weight: bold; */
+    height: 50px;
+  width: 100px;
+  font-weight: bold;
 }
 
-
+.btn-light:hover {
+background-color: #bed7dc;
+}
 
         /* Navigation Bar Styles */
         nav {
@@ -120,24 +140,26 @@
             text-align: center;
             padding: 25px 16px;
             text-decoration: none;
+            font-weight: bold;
         }
 
         nav li a:hover {
-            background-color: #ddd;
+            /* background-color: #ddd; */
             color: black;
+            text-decoration: underline;
         }
 
         /* Carousel Styles */
         .carousel {
             position: relative;
             width: 100%;
-            height: 400px;
+            /* height: 400px; */
             overflow: hidden;
         }
 
         .carousel img {
  
-            height: 100%;
+            width: 100%;
             object-fit: cover;
         }
 
@@ -176,6 +198,16 @@
             overflow: hidden;
         }
 
+        .furusato-nozei-bar2 {
+            background-color: #BED7DC;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 60px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
         .furusato-nozei-bar span {
             margin: 0 10px;
             font-weight: bold;
@@ -189,33 +221,54 @@
             margin-right: 0;
         }
 
+        .furusato-nozei-bar2 span {
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .furusato-nozei-bar2 span:first-child {
+            margin-left: 0;
+        }
+
+        .furusato-nozei-bar2 span:last-child {
+            margin-right: 0;
+        }
+
         /* Grid Styles */
 
         .grid-section {
-            margin-top: 200px;
-            margin-bottom: 200px;
+            margin: 200px 0;
+        }
+
+        .grid-section h2 {
+            font-size: 32px;
+            text-align: left;
+            width: 500px;
+            margin: 0 100px 50px;
         }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-gap: 20px;
-            margin-left: 100px;
+            grid-gap: 10px;
+            margin-left: 250px;
             position: relative;
             overflow: hidden;
+            width: 1200px;
         }
 
         .grid-item {
             background-color: #f2f2f2;
             padding: 20px;
-            text-align: left;
-            width: 300px;
-            height: 350px;
+            text-align: center;
+            width: 330px;
+            height: 390px;
             position: relative;
         }
 
         .grid-item h4 {
-            margin: 10px 0 5px;
+            margin: 20px 0 5px;
+
         }
 
         .grid-item img {
@@ -224,23 +277,30 @@
         }
 
         .grid-item p {
-            margin-top: 10px;
+            margin: 10px 0 30px;
             font-size: 14px;
             text-align: left;
         }
 
         .grid-item button {
-            width: 40%;
-            padding: 10px;
+            padding: 20px;
             background-color: #bed7dc;
             border: none;
             position: relative;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            /* box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); */
             transition: all 0.3s ease;
             cursor: pointer;
             font-size: 14px;
             text-align: left;
             text-transform: capitalize;
+            height: 40px;
+            width: 150px;
+            margin: 10px auto;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
         }
 
         .grid-item button span,
@@ -253,16 +313,14 @@
 .grid-item button:hover {
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
   transform: translateY(-1px);
+  background-color: #abc2c6;
+  color: #fff;
 }
 
 .two-column-section button:active ,
 .grid-item button:active  {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   transform: translateY(0px);
-}
-
-.two-column-section {
-    background: linear-gradient(135deg, #abc2c6, #fff);
 }
 
 .left-column a {
@@ -292,6 +350,15 @@
             align-items: center;
         }
 
+        .grid-icon i {
+            color: #FFDB5C;
+            font-size: 18px;
+        }
+
+        .grid-icon {
+            margin: 20px 0 25px;
+        }
+
         /* category */
 
 .category {
@@ -299,6 +366,8 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .circle-ctn {
@@ -336,15 +405,22 @@
 }
         /* 2 Column Layout */
         .two-column-section {
-            background-color: #fff;
-            margin: 200px auto;
+            /* background-color: #fff; */
+            margin: 200px auto 0;
             padding: 20px;
             display: grid;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 1fr 2fr;
             align-items: center;
             justify-content: center; /* Adjusted to space between */
-            max-width: 800px;
+            width: 1000px;
+            height: 500px;
+            gap: 50px;
             /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+        }
+
+        .two-column-ctn {
+            width: 100%;
+            background: linear-gradient(135deg, #abc2c6, #fff);
         }
 
         .left-column {
@@ -354,16 +430,22 @@
         .left-column h2 {
             font-size: 40px;
         }
- 
 
         .two-column-section img {
             max-width: 100%; /* Adjusted width */
+            height: 450px;
         }
         .two-column-section p {
             padding-right: 10px;
         }
 
         /* Blurred Images Section */
+        .blurred h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 48px;
+        }
+
         .blurred-images-section {
         position: relative;
         width: 100%;
@@ -434,7 +516,7 @@
 .not-blurred {
     position: relative; /* Added to position the not-blurred image */
     width: 350px;
-    height: 300px;
+    height: 350px;
     z-index: 100;
     border-radius: 5px;
 }
@@ -442,14 +524,28 @@
         /* Steps Section */
         .steps-section {
             text-align: center;
-            margin: 40px auto;
+            margin: 150px auto 40px;
         }
 
         .steps-section h2 {
             margin-bottom: 20px;
+            font-size: 32px;
         }
 
         .step {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background-color: #85979a;
+            color: #fff;
+            border-radius: 50%;
+            line-height: 60px;
+            margin: 0 80px;
+            font-size: 32px;
+            position: relative;
+        }
+
+        /* .step--2nd {
             display: inline-block;
             width: 60px;
             height: 60px;
@@ -460,6 +556,21 @@
             margin: 0 20px;
             font-size: 24px;
             position: relative;
+        } */
+
+        .step-texts {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        
+        .step-text {
+            width: 200px;
+        }
+
+        .step-text .p-bold {
+            font-weight: bold;
+            font-size: 24px;
         }
 
         .step::after {
@@ -468,7 +579,7 @@
             top: 30px;
             left: 100%;
             height: 2px;
-            width: 60px;
+            width: 170px;
             background-color: #333;
         }
 
@@ -476,11 +587,11 @@
             display: inline-block;
             width: 60px;
             height: 60px;
-            background-color: #333;
+            background-color: #85979a;
             color: #fff;
             border-radius: 50%;
             line-height: 60px;
-            margin: 0 20px;
+            margin: 0 80px;
             font-size: 24px;
             position: relative;
         }
@@ -491,45 +602,61 @@
 
         /* Image Background Section */
         .image-background-section {
-            background-image: url('background-image.jpg');
-            background-size: cover;
-            padding: 100px 0;
-            /* text-align: center; */
+            /* background-image: url('background-image.jpg');
+            background-size: cover; */
+            background-color: #e5eff1;
+            padding: 50px 0 100px;
+            text-align: center;
             color: #fff;
+            margin-top: 300px;
         }
 
         .image-background-section h2 {
-            margin-bottom: 20px;
+            margin-bottom: 50px;
             color: black;
+            font-size: 32px;
         }
 
         .image-background-section p {
-            margin-bottom: 18px;
+            margin: 10px;
             color: black;
-            text-align:justify;
+            /* text-align:justify; */
         }
 
         .image-background-section input[type="text"] {
             padding: 10px;
+            height: 30px;
+            width: 200px;
             border: none;
             border-radius: 5px;
+            font-size: 18px;
         }
 
         .image-background-section button {
             padding: 10px 20px;
+            height: 50px;
             border: none;
             background-color: #333;
             color: #fff;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 18px;
+        }
+
+        .email-input {
+            margin-top: 32px;
         }
 
         /* Footer Styles */
         footer {
-            background-color: #333;
+            background-color: #85979a;
             color: #fff;
             text-align: center;
             padding: 20px 0;
+        }
+
+        footer .all-rights {
+            font-size: 12px;
         }
 
     </style>
@@ -538,10 +665,11 @@
     <div class="title-ctn">
         <div class="search-container">
             <input type="text" placeholder="Search...">
-            <button type="submit"><i class="fa fa-search"></i>Search</button>
+            <button type="submit"><i class="fa fa-search"></i></button>
           </div>
         <div class="title">
-          <h1>Furusato Nozei</h1>
+          <h1>Furusato</h1>
+          <h1>Nozei</h1>
         </div>
         <div class="buttons-ctn">
             <button class="btn-dark">Contact us</button>
@@ -560,7 +688,7 @@
 
     <header>
         <div class="carousel">
-            <img src="img/sample header.png" alt="Carousel Image">
+            <img src="img/S1.png" alt="Carousel Image">
             <div class="carousel-arrow carousel-arrow-left">&#8249;</div>
             <div class="carousel-arrow carousel-arrow-right">&#8250;</div>
         </div>
@@ -586,67 +714,84 @@
                   <img src="img/airam-dato-on-zFRn0okB5aw-unsplash.jpg" alt="Image 1">
                 </div>  
               </div>
-            <h4>Category 1</h4>
+            <h4>Food</h4>
         </div>
         <div class="circle-ctn">
             <div class="circle">
                 <div class="image-container">
-                  <img src="img/masaaki-komori-2TjDelq95rc-unsplash.jpg" alt="Image 1">
+                  <img src="img/kristin-wilson-WdyindgveXQ-unsplash.jpg" alt="Image 1">
                 </div>  
               </div>
-              <h4>Category 2</h4>
+              <h4>Events</h4>
         </div>  
         <div class="circle-ctn">
             <div class="circle">
                 <div class="image-container">
-                  <img src="img/note-thanun-5G3_yxeAVY0-unsplash.jpg" alt="Image 1">
+                  <img src="img/louis-hansel-IipiNCpQw0k-unsplash.jpg" alt="Image 1">
                 </div>  
               </div>
-              <h4>Category 3</h4>
+              <h4>Restaurants</h4>
         </div>  
         <div class="circle-ctn">
             <div class="circle">
                 <div class="image-container">
-                  <img src="img/oriol-portell-AbwqpFnBDms-unsplash.jpg" alt="Image 1">
+                  <img src="img/matthieu-petiard-Pf6e3o0GL4M-unsplash.jpg" alt="Image 1">
                 </div>  
               </div>
-              <h4>Category 4</h4>
+              <h4>Sports</h4>
         </div>
         <div class="circle-ctn">
             <div class="circle">
                 <div class="image-container">
-                  <img src="img/kina-PaSdZe-htRI-unsplash.jpg" alt="Image 1">
+                  <img src="img/mediamodifier-PKdcZz-o6bw-unsplash.jpg" alt="Image 1">
                 </div>  
               </div>
-              <h4>Category 5</h4>
+              <h4>Baby</h4>
+        </div>
+        <div class="circle-ctn">
+            <div class="circle">
+                <div class="image-container">
+                  <img src="img/marcus-loke-xXJ6utyoSw0-unsplash.jpg" alt="Image 1">
+                </div>  
+              </div>
+              <h4>Clothes</h4>
+        </div>
+        <div class="circle-ctn">
+            <div class="circle">
+                <div class="image-container">
+                  <img src="img/dan-farrell-CpTbMyO2CcM-unsplash.jpg" alt="Image 1">
+                </div>  
+              </div>
+              <h4>Others</h4>
         </div>
         </div>  
       </div>
 
     <section class="grid-section">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore in dolore numquam magni!</h2>
             <div class="grid-container">
                 <div class="grid-item">
                     <img src="img/sebastian-coman-photography-RwDmUKpUP50-unsplash.jpg" alt="Grid Image 1">
-                    <h4>Grid Item 1</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste necessitatibus sed ad exercitationem eum, praesentium, quis iusto.</p>
+                    <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h4>
+                    <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <button>Learn more <span>&rarr;</span></button>
                 </div>
                 <div class="grid-item">
                     <img src="img/food-photographer-v725qS8UG6w-unsplash.jpg" alt="Grid Image 2">
-                    <h4>Grid Item 1</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste necessitatibus sed ad exercitationem eum, praesentium, quis iusto.</p>
+                    <h4>Iste necessitatibus sed ad exercitationem eum</h4>
+                    <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <button>Learn more <span>&rarr;</span></button>
                 </div>
                 <div class="grid-item">
                     <img src="img/kina-PaSdZe-htRI-unsplash.jpg" alt="Grid Image 3">
-                    <h4>Grid Item 1</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste necessitatibus sed ad exercitationem eum, praesentium, quis iusto.</p>
+                    <h4>Iste necessitatibus sed ad exercitationem eum</h4>
+                    <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <button>Learn more <span>&rarr;</span></button>
                 </div>
                 <div class="grid-item">
                     <img src="img/takaharu-osanai-NZVjJ01a-W4-unsplash.jpg" alt="Grid Image 4">
-                    <h4>Grid Item 1</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste necessitatibus sed ad exercitationem eum, praesentium, quis iusto.</p>
+                    <h4>Exercitationem eum, praesentium, quis iusto.</h4>
+                    <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <button>Learn more <span>&rarr;</span></button>
                 </div>
             </div>
@@ -656,16 +801,66 @@
                 </div>
     </section>
 
-
+    <div class="two-column-ctn">
     <section class="two-column-section">
-        <div class="left-column">
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia purus non est fermentum, vitae vulputate ex blandit. Sed auctor augue at condimentum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium neque ipsum quisquam consequatur, doloremque eum harum corrupti facilis quo et porro nam sint consequuntur deserunt doloribus? Reprehenderit, animi corrupti.</p>
-            <a href="#">Learn more <span>&rarr;</span></a>
-        </div>
-        <img src="img/pexels-charlotte-may-5947093.jpg" alt="Image">
+            <div class="left-column">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia purus non est fermentum, vitae vulputate ex blandit. Sed auctor augue at condimentum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium neque ipsum quisquam consequatur, doloremque eum harum corrupti facilis.</p>
+                <a href="#">Learn more <span>&rarr;</span></a>
+            </div>
+            <img src="img/pexels-ekaterina-bolovtsova-7113858.jpg" alt="Image">
     </section>
+    <div class="furusato-nozei-bar2">
+        <span>Furusato Nozei</span>
+        <span>Furusato Nozei</span>
+        <span>Furusato Nozei</span>
+        <span>Furusato Nozei</span>
+        <span>Furusato Nozei</span>
+        <span>Furusato Nozei</span>
+        <span>Furusato Nozei</span>
+        <span>Furusato Nozei</span>
+        <span>Furusato Nozei</span>
+        <span>Furusato Nozei</span>
+        <span>Furusato Nozei</span>
+    </div>
+</div>
 
+<section class="grid-section">
+    <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, quisquam.</h2>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="img/benjamin-wong-c8ioq1LH_mI-unsplash.jpg" alt="Grid Image 1">
+            <h4>Lorem ipsum dolor sit amet consectetur</h4>
+            <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <button>Learn more <span>&rarr;</span></button>
+        </div>
+        <div class="grid-item">
+            <img src="img/kevin-borrill-ZSKruaRrgh8-unsplash.jpg" alt="Grid Image 2">
+            <h4>Amet consectetur, adipisicing elit</h4>
+            <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <button>Learn more <span>&rarr;</span></button>
+        </div>
+        <div class="grid-item">
+            <img src="img/koukichi-takahashi-fZdX9BW8WDs-unsplash.jpg" alt="Grid Image 3">
+            <h4>Iste necessitatibus sed</h4>
+            <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <button>Learn more <span>&rarr;</span></button>
+        </div>
+        <div class="grid-item">
+            <img src="img/sorasak-_UIN-pFfJ7c-unsplash.jpg" alt="Grid Image 4">
+            <h4>exercitationem eum, praesentium, quis iusto</h4>
+            <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <button>Learn more <span>&rarr;</span></button>
+        </div>
+    </div>
+        <div class="grid-arrows">
+            <div class="grid-arrow">&#8249;</div>
+            <div class="grid-arrow">&#8250;</div>
+        </div>
+</section>
+
+<div class="blurred">
+    <h2>Lorem ipsum dolor sit!</h2>
     <section class="blurred-images-section">
         <div class="blurred-image-bg">
             <div class="not-blurred-ctn">   
@@ -686,26 +881,44 @@
         <div class="blurred-image-3"></div>
    </div>
     </section>
+</div>
 
     <section class="steps-section">
-        <h2>STEPS</h2>
-        <div class="step">1</div>
-        <div class="step">2</div>
-        <div class="step--last">3</div>
-        <p>Step 1 description</p>
-        <p>Step 2 description</p>
-        <p>Step 3 description</p>
+        <h2>EASY STEPS</h2>
+        <div>
+            <div class="step">1</div>
+            <div class="step">2</div>
+            <div class="step--last">3</div>
+        </div>
+        <div class="step-texts">
+            <div class="step-text">
+                <p class="p-bold">Step 1 description</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="step-text">
+                <p class="p-bold">Step 2 description</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="step-text">
+                <p class="p-bold">Step 3 description</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
     </section>
 
     <section class="image-background-section">
-        <h2>Heading</h2>
+        <h2>Newsletter</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+       <div class="email-input">
         <input type="text" placeholder="Enter your email">
-        <button>Send</button>
+        <button>Sign Up</button>
+       </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
+        <p>&copy; Vertex Digital Marketing 2024</p>
+        <p class="all-rights">All rights reserved</p>
     </footer>
 </body>
 </html>
