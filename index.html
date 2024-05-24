@@ -1,753 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Maven+Pro:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/a898e0e4e9.js" crossorigin="anonymous"></script>
-
+<link rel="stylesheet" type="text/css" href="style.css">
 <title>My Website</title>
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: "Raleway", sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-       
-        .title {
-            text-align: center;
-        }
-
-        .title h1 {
-            margin: 0;
-        }
-
-        /* search bar */
-        .title-ctn {
-        display: flex;
-        flex-direction: row; /* Changed from column to row */
-        justify-content:space-around;
-        align-items: center;
-        height: 100px;
-        margin: 20px 0;
-}
-
-.title {
-  margin-right: 20px; /* Add some spacing between title and search-container */
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 50px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.search-container input {
-  padding: 8px 16px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  flex: 1;
-  height: 30px;
-  width: 100px;
-  border-radius: 50px;
-}
-
-.search-container button {
-  background-color: #85979a;
-  color: #fff;
-  border: none;
-  outline: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 18px;
-  height: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-.search-container button:hover {
-  background-color: #6a797b;
-}
-
-.search-container button i {
-  font-size: 18px;
-}
-
-.btn-dark {
-    background-color: #bed7dc;
-    font-size: 18px;
-    border-radius: 50px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    /* font-weight: bold; */
-    height: 50px;
-  width: 150px;
-  font-weight: bold;
-}
-
-.btn-dark:hover {
-background-color: #e5eff1;
-}
-
-.btn-light {
-    background-color: #e5eff1;
-    font-size: 18px;
-    border-radius: 50px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    /* font-weight: bold; */
-    height: 50px;
-  width: 100px;
-  font-weight: bold;
-}
-
-.btn-light:hover {
-background-color: #bed7dc;
-}
-
-        /* Navigation Bar Styles */
-        nav {
-            background-color: #BED7DC;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav li {
-            float: left;
-        }
-
-        nav li a {
-            display: block;
-            color: #000;
-            text-align: center;
-            padding: 25px 16px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav li a:hover {
-            /* background-color: #ddd; */
-            color: black;
-            text-decoration: underline;
-        }
-
-        /* Carousel Styles */
-        .carousel {
-            position: relative;
-            width: 100%;
-            /* height: 400px; */
-            overflow: hidden;
-        }
-
-        .carousel img {
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            height: 25px;
-            width: 25px;
-            transform: translateY(-50%);
-            font-size: 24px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .carousel-arrow-left {
-            left: 10px;
-        }
-
-        .carousel-arrow-right {
-            right: 10px;
-        }
-
-        /* Furusato Nozei Bar */
-        .furusato-nozei-bar {
-            background-color: #f2f2f2;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 60px;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        .furusato-nozei-bar2 {
-            background-color: #BED7DC;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 60px;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        .furusato-nozei-bar span {
-            margin: 0 10px;
-            font-weight: bold;
-        }
-
-        .furusato-nozei-bar span:first-child {
-            margin-left: 0;
-        }
-
-        .furusato-nozei-bar span:last-child {
-            margin-right: 0;
-        }
-
-        .furusato-nozei-bar2 span {
-            margin: 0 10px;
-            font-weight: bold;
-        }
-
-        .furusato-nozei-bar2 span:first-child {
-            margin-left: 0;
-        }
-
-        .furusato-nozei-bar2 span:last-child {
-            margin-right: 0;
-        }
-
-        /* Grid Styles */
-
-        .grid-section {
-            margin: 100px 0;
-        }
-
-        .grid-section h2 {
-            font-size: 32px;
-            text-align: left;
-            width: 500px;
-            margin: 0 100px 50px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 10px;
-            margin-left: 250px;
-            position: relative;
-            overflow: hidden;
-            width: 1200px;
-        }
-
-        .grid-item {
-            background-color: #f2f2f2;
-            padding: 20px;
-            text-align: center;
-            width: 330px;
-            height: 390px;
-            position: relative;
-        }
-
-        .grid-item h4 {
-            margin: 20px 0 5px;
-
-        }
-
-        .grid-item img {
-            max-width: 100%;
-            max-height: 200px;
-        }
-
-        .grid-item p {
-            margin: 10px 0 30px;
-            font-size: 14px;
-            text-align: left;
-        }
-
-        .grid-item button {
-            padding: 20px;
-            background-color: #bed7dc;
-            border: none;
-            position: relative;
-            /* box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); */
-            transition: all 0.3s ease;
-            cursor: pointer;
-            font-size: 14px;
-            text-align: left;
-            text-transform: capitalize;
-            height: 40px;
-            width: 150px;
-            margin: 10px auto;
-            border-radius: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-        }
-
-        .grid-item button span,
-        .two-column-section button span {
-            margin-left: 7px;
-        }
-
-
-.two-column-section button:hover,
-.grid-item button:hover {
-  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
-  transform: translateY(-1px);
-  background-color: #abc2c6;
-  /* color: #fff; */
-}
-
-.two-column-section button:active ,
-.grid-item button:active  {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  transform: translateY(0px);
-}
-
-.left-column a {
-    color: #000;
-}
-
-        .grid-arrows {
-            margin: 20px 30px;
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
-        }
-
-        .grid-arrow {
-            /* display: inline-block; */
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            text-align: center;
-            line-height: 40px;
-            cursor: pointer;
-            margin: 0 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .grid-icon i {
-            color: #FFDB5C;
-            font-size: 18px;
-        }
-
-        .grid-icon {
-            margin: 20px 0 25px;
-        }
-
-        /* category */
-
-.category {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.circle-ctn {
-    text-align: center;
-}
-
-.circle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-}
-
-.image-container {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.image-container img:hover {
-  transform: scale(1.1);
-}
-
-.circle p {
-  margin-top: 10px;
-  text-align: center;
-}
-        /* 2 Column Layout */
-        .two-column-section {
-            /* background-color: #fff; */
-            margin: 100px auto 0;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            align-items: center;
-            justify-content: center; /* Adjusted to space between */
-            width: 1000px;
-            height: 500px;
-            gap: 50px;
-            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
-        }
-
-        .two-column-ctn {
-            width: 100%;
-            background: linear-gradient(135deg, #abc2c6, #fff);
-        }
-
-        .left-column {
-            padding: 20px;
-        }
-
-        .left-column h2 {
-            font-size: 40px;
-        }
-
-        .two-column-section img {
-            max-width: 100%; /* Adjusted width */
-            height: 450px;
-        }
-        .two-column-section p {
-            padding-right: 10px;
-        }
-
-        /* Blurred Images Section */
-        .blurred h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 48px;
-        }
-
-        .blurred-images-section {
-        position: relative;
-        width: 100%;
-        height: 500px;
-        display: grid;
-        grid-column-gap: 0;
-        grid-row-gap: 0;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .blurred-image-p {
-        position: absolute;
-        font-weight: bold;
-        color: #fff;
-        bottom: 20px;
-        left: 25%;
-    }
-
-.blurred-image-bg {
-    position: relative;
-    overflow: hidden; /* Added to prevent the blurred images from overflowing */
-}
-
-.not-blurred-ctn {
-    position: absolute;
-    top: 10%;
-    left: 12%;
-}
-
-.not-blurred-ctn {
-    width: 300px;
-    height: 300px;
-}
-
-.blurred-image-1 {
-    position: absolute; /* Changed to relative positioning */
-    width: 100%; /* Adjusted width */
-    height: 100%; /* Adjusted height */
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center;
-    background-image: url(img/pexels-teona-swift-6850603.jpg);
-    filter: blur(13px);
-    transform: scale(1.1);
-}
-
-
-.blurred-image-2 {
-    position: absolute; /* Changed to relative positioning */
-    width: 100%; /* Adjusted width */
-    height: 100%; /* Adjusted height */
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center;
-    background-image: url(img/pexels-shvetsa-5231137.jpg);
-    filter: blur(13px);
-    transform: scale(1.1);
-}
-
-
-.blurred-image-3 {
-    position: absolute; /* Changed to relative positioning */
-    width: 100%; /* Adjusted width */
-    height: 100%; /* Adjusted height */
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center;
-    background-image: url(img/pexels-teona-swift-6850603.jpg);
-    filter: blur(13px);
-    transform: scale(1.1);
-}
-
-.not-blurred {
-    position: relative; /* Added to position the not-blurred image */
-    width: 350px;
-    height: 350px;
-    z-index: 100;
-    border-radius: 5px;
-}
-
-        /* Steps Section */
-        .steps-section {
-            text-align: center;
-            margin: 150px auto 40px;
-        }
-
-        .steps-section .main-h2 {
-           font-size: 32px;
-        }
-
-        .steps-section .steps-p {
-            margin-bottom: 100px;
-        }
-
-
-        .step {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background-color: #85979a;
-            color: #fff;
-            border-radius: 50%;
-            line-height: 60px;
-            margin: 0 80px;
-            font-size: 32px;
-            position: relative;
-        }
-
-        /* .step--2nd {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background-color: #333;
-            color: #fff;
-            border-radius: 50%;
-            line-height: 60px;
-            margin: 0 20px;
-            font-size: 24px;
-            position: relative;
-        } */
-
-        .step-texts {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-        }
-
-        .icon {
-            padding: 0 15px;
-            height: 60px;
-            width: 60px;
-            border-radius: 50%;
-            background-color: #bed7dc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px auto;
-            border: 5px solid #fff;
-
-        }
-        
-        .step-text {
-            width: 200px;
-            padding: 20px;
-            border: 2px solid #abc2c6;
-        }
-
-        .step-text i {
-            font-size: 30px;
-        }
-
-        .card-text .p-bold {
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .step::after {
-            content: "";
-            position: absolute;
-            top: 30px;
-            left: 100%;
-            height: 2px;
-            width: 170px;
-            background-color: #333;
-        }
-
-        .step--last {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background-color: #85979a;
-            color: #fff;
-            border-radius: 50%;
-            line-height: 60px;
-            margin: 0 80px;
-            font-size: 24px;
-            position: relative;
-        }
-
-        .step:last-child::after {
-            display: none;
-        }
-
-        /* Image Background Section */
-        .image-background-section {
-            /* background-image: url('background-image.jpg');
-            background-size: cover; */
-            background-color: #e5eff1;
-            padding: 50px 0 100px;
-            text-align: center;
-            color: #fff;
-            margin-top: 300px;
-        }
-
-        .image-background-section h2 {
-            margin-bottom: 50px;
-            color: black;
-            font-size: 32px;
-        }
-
-        .image-background-section p {
-            margin: 10px;
-            color: black;
-            /* text-align:justify; */
-        }
-
-        .image-background-section input[type="text"] {
-            padding: 10px;
-            height: 30px;
-            width: 200px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-
-        .image-background-section button {
-            padding: 10px 20px;
-            height: 50px;
-            border: none;
-            background-color: #333;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        .email-input {
-            margin-top: 32px;
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #85979a;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        footer .all-rights {
-            font-size: 12px;
-        }
-
-
-
-        /* start here */
-        .card {
-      width: 250px;
-      height: 150px;
-      background-color: #bed7dc;
-      border-radius: 10px;
-      padding: 20px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      position: relative;
-      margin: 0 20px;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 50%;
-      background-color: white;
-      padding: 30px 0;
-    }
-
-    .card-text {
-        position: absolute;
-        left: 10px;
-        bottom: -40px;
-    }
-
-    .icon-container {
-      background: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .icon i {
-        font-size: 30px;
-    }
-
-    .card-flex {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    </style>
+   
 </head>
+
+
 <body>
     <div class="title-ctn">
         <div class="search-container">
@@ -755,8 +18,7 @@ background-color: #bed7dc;
             <button type="submit"><i class="fa fa-search"></i></button>
           </div>
         <div class="title">
-          <h1>Furusato</h1>
-          <h1>Nozei</h1>
+          <img class="title-icon" src="img/Shine-nobg.png" alt="">
         </div>
         <div class="buttons-ctn">
             <button class="btn-dark">Contact us</button>
@@ -766,19 +28,32 @@ background-color: #bed7dc;
     <nav>
         <ul>
             <li><a href="#">Top</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Program Information</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Contact us</a></li>
+            <!-- <li><a href="#">Home</a></li> -->
+            <li><a href="pages/program.html">Program Information</a></li>
+            <li><a href="pages/products.html">Products</a></li>
+            <li><a href="pages/faq.html">FAQ</a></li>
         </ul>
     </nav>
 
     <header>
         <div class="carousel">
+            <div class="carousel-container">
+              <img src="img/carousel/Hokkaido products.png" alt="Image 1" class="carousel-image active">
+              <img src="img/carousel/kyoto travels.png" alt="Image 2" class="carousel-image">
+              <img src="img/carousel/no return gift.png" alt="Image 3" class="carousel-image">
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-arrow carousel-arrow-left">&lt;</button>
+              <button class="carousel-arrow carousel-arrow-right">&gt;</button>
+            </div>
+          </div>
+
+
+        <!-- <div class="carousel">
             <img src="img/S1.png" alt="Carousel Image">
             <div class="carousel-arrow carousel-arrow-left">&#8249;</div>
-            <div class="carousel-arrow carousel-arrow-right">&#8250;</div>
-        </div>
+            <div class="carousel-arrow carousel-arrow-left">&#8250;</div>
+        </div> -->
         <div class="furusato-nozei-bar">
             <span>Furusato Nozei</span>
             <span>Furusato Nozei</span>
@@ -796,59 +71,59 @@ background-color: #bed7dc;
 
     <div class="category">
         <div class="circle-ctn">
-            <div class="circle">
+            <a href="pages/sushi.html" class="circle">
                 <div class="image-container">
                   <img src="img/airam-dato-on-zFRn0okB5aw-unsplash.jpg" alt="Image 1">
                 </div>  
-              </div>
+            </a>
             <h4>Food</h4>
         </div>
         <div class="circle-ctn">
-            <div class="circle">
+            <a href="pages/sushi.html" class="circle">
                 <div class="image-container">
                   <img src="img/kristin-wilson-WdyindgveXQ-unsplash.jpg" alt="Image 1">
                 </div>  
-              </div>
+            </a>
               <h4>Events</h4>
         </div>  
         <div class="circle-ctn">
-            <div class="circle">
+            <a href="pages/sushi.html" class="circle">
                 <div class="image-container">
                   <img src="img/louis-hansel-IipiNCpQw0k-unsplash.jpg" alt="Image 1">
                 </div>  
-              </div>
+            </a>
               <h4>Restaurants</h4>
         </div>  
         <div class="circle-ctn">
-            <div class="circle">
+            <a href="pages/sushi.html" class="circle">
                 <div class="image-container">
                   <img src="img/matthieu-petiard-Pf6e3o0GL4M-unsplash.jpg" alt="Image 1">
                 </div>  
-              </div>
+            </a>
               <h4>Sports</h4>
         </div>
         <div class="circle-ctn">
-            <div class="circle">
+            <a href="pages/sushi.html" class="circle">
                 <div class="image-container">
                   <img src="img/mediamodifier-PKdcZz-o6bw-unsplash.jpg" alt="Image 1">
                 </div>  
-              </div>
+            </a>
               <h4>Baby</h4>
         </div>
         <div class="circle-ctn">
-            <div class="circle">
+            <a href="pages/sushi.html" class="circle">
                 <div class="image-container">
                   <img src="img/marcus-loke-xXJ6utyoSw0-unsplash.jpg" alt="Image 1">
                 </div>  
-              </div>
+            </a>
               <h4>Clothes</h4>
         </div>
         <div class="circle-ctn">
-            <div class="circle">
+            <a href="pages/sushi.html" class="circle">
                 <div class="image-container">
                   <img src="img/dan-farrell-CpTbMyO2CcM-unsplash.jpg" alt="Image 1">
                 </div>  
-              </div>
+            </a>
               <h4>Others</h4>
         </div>
         </div>  
@@ -859,23 +134,33 @@ background-color: #bed7dc;
             <div class="grid-container">
                 <div class="grid-item">
                     <img src="img/sebastian-coman-photography-RwDmUKpUP50-unsplash.jpg" alt="Grid Image 1">
-                    <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h4>
-                    <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <button>Learn more <span>&rarr;</span></button>
+                    <div class="grid-contents">
+                      <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h4>
+                      <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+                      <button>Learn more <span>&rarr;</span></button>
+                    </div>
+    
                 </div>
                 <div class="grid-item">
                     <img src="img/food-photographer-v725qS8UG6w-unsplash.jpg" alt="Grid Image 2">
-                    <h4>Iste necessitatibus sed ad exercitationem eum</h4>
-                    <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <button>Learn more <span>&rarr;</span></button>
+                    <div class="grid-contents">
+                      <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h4>
+                      <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+                      <button>Learn more <span>&rarr;</span></button>
+                    </div>
                 </div>
                 <div class="grid-item">
                     <img src="img/kina-PaSdZe-htRI-unsplash.jpg" alt="Grid Image 3">
-                    <h4>Iste necessitatibus sed ad exercitationem eum</h4>
-                    <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <button>Learn more <span>&rarr;</span></button>
+                    <div class="grid-contents">
+                      <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h4>
+                      <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+                      <button>Learn more <span>&rarr;</span></button>
+                    </div>
                 </div>
-                <div class="grid-item">
+                <!-- <div class="grid-item">
                     <img src="img/takaharu-osanai-NZVjJ01a-W4-unsplash.jpg" alt="Grid Image 4">
                     <h4>Exercitationem eum, praesentium, quis iusto.</h4>
                     <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
@@ -885,7 +170,7 @@ background-color: #bed7dc;
                 <div class="grid-arrows">
                     <div class="grid-arrow">&#8249;</div>
                     <div class="grid-arrow">&#8250;</div>
-                </div>
+                </div> -->
     </section>
 
     <div class="two-column-ctn">
@@ -917,23 +202,32 @@ background-color: #bed7dc;
     <div class="grid-container">
         <div class="grid-item">
             <img src="img/benjamin-wong-c8ioq1LH_mI-unsplash.jpg" alt="Grid Image 1">
-            <h4>Lorem ipsum dolor sit amet consectetur</h4>
-            <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <button>Learn more <span>&rarr;</span></button>
+            <div class="grid-contents">
+              <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h4>
+              <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+              <button>Learn more <span>&rarr;</span></button>
+            </div>
         </div>
         <div class="grid-item">
             <img src="img/kevin-borrill-ZSKruaRrgh8-unsplash.jpg" alt="Grid Image 2">
-            <h4>Amet consectetur, adipisicing elit</h4>
-            <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <button>Learn more <span>&rarr;</span></button>
+            <div class="grid-contents">
+              <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h4>
+              <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+              <button>Learn more <span>&rarr;</span></button>
+            </div>
         </div>
         <div class="grid-item">
             <img src="img/koukichi-takahashi-fZdX9BW8WDs-unsplash.jpg" alt="Grid Image 3">
-            <h4>Iste necessitatibus sed</h4>
-            <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <button>Learn more <span>&rarr;</span></button>
+            <div class="grid-contents">
+              <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h4>
+              <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+              <button>Learn more <span>&rarr;</span></button>
+            </div>
         </div>
-        <div class="grid-item">
+        <!-- <div class="grid-item">
             <img src="img/sorasak-_UIN-pFfJ7c-unsplash.jpg" alt="Grid Image 4">
             <h4>exercitationem eum, praesentium, quis iusto</h4>
             <div class="grid-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
@@ -943,7 +237,7 @@ background-color: #bed7dc;
         <div class="grid-arrows">
             <div class="grid-arrow">&#8249;</div>
             <div class="grid-arrow">&#8250;</div>
-        </div>
+        </div> -->
 </section>
 
 <div class="blurred">
@@ -975,7 +269,7 @@ background-color: #bed7dc;
 
     <section class="steps-section">
         <h2 class="main-h2">EASY STEPS</h2>
-        <p class="steps-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, eius dolore facere repudiandae ipsum odio labore inventore neque.</p>
+        <p class="steps-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         <!-- <div>
             <div class="step">1</div>
             <div class="step">2</div>
@@ -1034,17 +328,167 @@ background-color: #bed7dc;
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
        <div class="email-input">
-        <input type="text" placeholder="Enter your email">
-        <button>Sign Up</button>
+        <!-- <input type="text" placeholder="Enter your email"> -->
+        <button id="subscribeBtn">Subscribe</button>
        </div>
+
+<div id="popupContainer" class="popup-container">
+  <div class="popup-content">
+    <i class="fa-solid fa-xmark exit"></i>
+    <i class="fa-solid fa-envelope-open-text mail"></i>
+    <h2 class="formh2">Subscribe to our newsletter!</h2>
+    <p class="formp"></p>
+    <form>
+        <div class="formInput">
+            <label for="name">Name:</label>
+            <input class="subscribeInput" id="name" name="name" required>
+        </div>
+         <div class="formInput">
+            <label for="email">Email:</label>
+            <input class="subscribeInput" id="email" name="email" required>
+        </div>
+
+      
+      <div class="checkbox-container">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree with the terms and conditions</label>
+      </div>
+      
+      <button type="submit" class="submitBtn">Subscribe</button>
+    </form>
+  </div>
+</div>
     </section>
 
+    
 
 
+
+
+    <!-- <footer>
+
+    </footer> -->
 
     <footer>
-        <p>&copy; Vertex Digital Marketing 2024</p>
-        <p class="all-rights">All rights reserved</p>
+      <div class="footer-container">
+        <div class="footer-rows">
+          <div class="footer-row">
+            <ul class="footer-links">
+              <li><h3>Learn more</h3></li>
+              <li><a href="#">Top</a></li>
+              <li><a href="#">Program Information</a></li>
+              <li><a href="#">Products</a></li>
+            </ul>
+          </div>
+          <div class="footer-row">
+            <ul class="footer-links">
+              <li><h3>Other information</h3></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-row">
+            <ul class="footer-contact">
+              <li><h3>Contact information</h3></li>
+              <li class="footer-info">0358295955</li>
+              <li class="footer-info">111-0053 Tokyo, Taito-ku, Asakusabashi 3-4-4, Yamada Building 2F, Mash-Up R Co.,Ltd. Tel.</li>
+            </ul>
+            <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="footer-row">
+            <p>&copy; Vertex Digital Marketing 2024</p>
+            <p class="all-rights">All rights reserved</p>
+          </div>
+        </div>
+      </div>
     </footer>
+
+
+
+    <script>
+        const carouselContainer = document.querySelector('.carousel-container');
+        const carouselImages = document.querySelectorAll('.carousel-image');
+        const leftButton = document.querySelector('.carousel-arrow-left');
+        const rightButton = document.querySelector('.carousel-arrow-right');
+        const openPopupBtn = document.getElementById('subscribeBtn');
+        const popupContainer = document.getElementById('popupContainer');
+        const imageContainer = document.querySelector('.image-container');
+        const exitButton = popupContainer.querySelector('.exit');
+        const form = popupContainer.querySelector('form');
+        let currentIndex = 0;
+        
+        leftButton.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
+          updateCarousel();
+        });
+        
+        rightButton.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % carouselImages.length;
+          updateCarousel();
+        });
+        
+        function updateCarousel() {
+          carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        openPopupBtn.addEventListener('click', () => {
+        popupContainer.style.display = 'block';
+        });
+
+        popupContainer.addEventListener('click', (event) => {
+        if (event.target === popupContainer) {
+            popupContainer.style.display = 'none';
+        }
+        });
+
+        // Add a click event listener to the exit button
+        exitButton.addEventListener('click', () => {
+          // Hide the pop-up container
+          popupContainer.style.display = 'none';
+        });
+
+
+
+
+
+          // Changing text in form after subscribing
+
+// Get the name and email input elements
+const nameInput = form.querySelector('#name');
+const emailInput = form.querySelector('#email');
+
+// Get the heading and form elements
+const headingform = popupContainer.querySelector('.formh2');
+const formp = popupContainer.querySelector('.formp');
+// const formContainer = popupContainer.querySelector('form');
+
+// Get the subscribe button element
+const subscribeButton = form.querySelector('.submitBtn');
+
+// Add a click event listener to the subscribe button
+subscribeButton.addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent form submission
+
+  // Check if name and email fields are filled
+  if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '') {
+    // Change the heading text
+    headingform.textContent = 'Subscribed!';
+    formp.textContent = 'Thank you for signing up to our newsletter!';
+
+    // Hide the form
+    form.style.display = 'none';
+  }
+});
+
+
+        </script>
 </body>
 </html>
