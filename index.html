@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Maven+Pro:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
@@ -13,17 +14,23 @@
 
 <body>
     <div class="title-ctn">
+      <div class="title">
+        <img class="title-icon" src="img/Shine-nobg.png" alt="">
+      </div>
         <div class="search-container">
             <input type="text" placeholder="Search...">
             <button type="submit"><i class="fa fa-search"></i></button>
           </div>
-        <div class="title">
-          <img class="title-icon" src="img/Shine-nobg.png" alt="">
-        </div>
+
         <div class="buttons-ctn">
             <button class="btn-dark">Contact us</button>
             <button class="btn-light">Sign-up</button>
         </div>
+      </div>
+      <div class="burger-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div> 
       </div>
     <nav>
         <ul>
@@ -38,7 +45,8 @@
     <header>
         <div class="carousel">
             <div class="carousel-container">
-              <img src="img/carousel/Hokkaido products.png" alt="Image 1" class="carousel-image active">
+              <img src="img/S1.png" alt="" class="carousel-image active">
+              <img src="img/carousel/Hokkaido products.png" alt="Image 1" class="carousel-image">
               <img src="img/carousel/kyoto travels.png" alt="Image 2" class="carousel-image">
               <img src="img/carousel/no return gift.png" alt="Image 3" class="carousel-image">
             </div>
@@ -248,7 +256,7 @@
                 <img class="not-blurred" src="img/pexels-joaojesusdesign-1084542.jpg" alt="">
             </div>
              <div class="blurred-image-1"></div>
-             <p class="blurred-image-p">Lorem ipsum dolor sit.</p>
+             <p class="blurred-image-p">Lorem ipsum dolor sit adipisicing.</p>
         </div>
         <div class="blurred-image-bg">
             <div class="not-blurred-ctn">   
@@ -410,85 +418,7 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
 
-
-
-    <script>
-        const carouselContainer = document.querySelector('.carousel-container');
-        const carouselImages = document.querySelectorAll('.carousel-image');
-        const leftButton = document.querySelector('.carousel-arrow-left');
-        const rightButton = document.querySelector('.carousel-arrow-right');
-        const openPopupBtn = document.getElementById('subscribeBtn');
-        const popupContainer = document.getElementById('popupContainer');
-        const imageContainer = document.querySelector('.image-container');
-        const exitButton = popupContainer.querySelector('.exit');
-        const form = popupContainer.querySelector('form');
-        let currentIndex = 0;
-        
-        leftButton.addEventListener('click', () => {
-          currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
-          updateCarousel();
-        });
-        
-        rightButton.addEventListener('click', () => {
-          currentIndex = (currentIndex + 1) % carouselImages.length;
-          updateCarousel();
-        });
-        
-        function updateCarousel() {
-          carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-
-        openPopupBtn.addEventListener('click', () => {
-        popupContainer.style.display = 'block';
-        });
-
-        popupContainer.addEventListener('click', (event) => {
-        if (event.target === popupContainer) {
-            popupContainer.style.display = 'none';
-        }
-        });
-
-        // Add a click event listener to the exit button
-        exitButton.addEventListener('click', () => {
-          // Hide the pop-up container
-          popupContainer.style.display = 'none';
-        });
-
-
-
-
-
-          // Changing text in form after subscribing
-
-// Get the name and email input elements
-const nameInput = form.querySelector('#name');
-const emailInput = form.querySelector('#email');
-
-// Get the heading and form elements
-const headingform = popupContainer.querySelector('.formh2');
-const formp = popupContainer.querySelector('.formp');
-// const formContainer = popupContainer.querySelector('form');
-
-// Get the subscribe button element
-const subscribeButton = form.querySelector('.submitBtn');
-
-// Add a click event listener to the subscribe button
-subscribeButton.addEventListener('click', (event) => {
-  event.preventDefault(); // Prevent form submission
-
-  // Check if name and email fields are filled
-  if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '') {
-    // Change the heading text
-    headingform.textContent = 'Subscribed!';
-    formp.textContent = 'Thank you for signing up to our newsletter!';
-
-    // Hide the form
-    form.style.display = 'none';
-  }
-});
-
-
-        </script>
 </body>
 </html>
